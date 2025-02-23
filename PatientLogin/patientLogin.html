@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Login Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="login-container">  
+      <div class="login-content">
+        <div class="login-image"><img src="patientLogin.jpg" alt="Patient Login"></div>
+        <div class="login-form"> 
+            <h2>Patient Login</h2>
+            <form action="../Register/patientRegister.php" class="form">
+            <div class="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" class="form-input" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" class="form-input" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn">Sign In</button>
+            </div>
+            <div class="options">
+              <label class="checkbox-wrap">Remember Me
+                <input type="checkbox" checked>
+              </label>
+              <a href="#">Forgot Password</a>
+            </div>
+          </form>
+          <p class="signup-link">Not a member? <a href="../Register/patientRegister.html">Sign Up</a></p>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
