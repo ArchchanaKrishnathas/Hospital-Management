@@ -301,7 +301,7 @@ h3{
 /* Main container styling */
 .about {
     width: 100%;
-    background-image: url('background-pattern.png');
+    background-image: url('./images/background-pattern.png');
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;

@@ -1,6 +1,6 @@
 body {
     font-family: 'Lato', sans-serif;
-    background-image: url(bgLogin.jpg); background-size: cover; background-repeat: no-repeat;
+    background-image: url(../images/PatientbgLogin.jpg); background-size: cover; background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
