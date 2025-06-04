@@ -1,39 +1,65 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Login Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+<body>
     <div class="login-container">  
-      <div class="login-content">
-        <div class="login-image"><img src="../images/AdminLogin.jpg" alt="Admin Login"></div>
-        <div class="login-form"> 
-            <h2>Admin Login</h2>
-            <form action="" class="form">
-            <div class="form-group">
-              <label for="username">Username</label>
-              <input type="text" id="username" class="form-input" placeholder="Username" required>
+        <div class="login-content">
+            <div class="login-image">
+                <img src="../images/AdminLogin.jpg" alt="Admin Login">
             </div>
-            <div class="form-group">
-              <label for="password">Password</label>
-              <input type="password" id="password" class="form-input" placeholder="Password" required>
+            <div class="login-form"> 
+                <h2>Admin Login</h2>
+                <form onsubmit="return login()"> <!-- Prevent default form submission -->
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" class="form-input" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-input" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn">Sign In</button>
+                    </div>
+                    <div class="options">
+                        <label class="checkbox-wrap">Remember Me
+                            <input type="checkbox" checked>
+                        </label>
+                        <a href="#">Forgot Password</a>
+                    </div>
+                </form>
+                <p id="message" class="message"></p> <!-- Message area added -->
+                <p class="signup-link">Not a member? <a href="../Register/adminRegister.html">Sign Up</a></p>
             </div>
-            <div class="form-group">
-              <button type="submit" class="btn">Sign In</button>
-            </div>
-            <div class="options">
-              <label class="checkbox-wrap">Remember Me
-                <input type="checkbox" checked>
-              </label>
-              <a href="#">Forgot Password</a>
-            </div>
-          </form>
-          <p class="signup-link">Not a member? <a href="../Register/adminRegister.html">Sign Up</a></p>
         </div>
-      </div>
     </div>
-  </body>
+
+    <script>
+        function login() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const message = document.getElementById("message");
+
+            if (username && password) { 
+                alert("Login Successful! Redirecting to dashboard..."); // Show alert message
+                message.style.color = "green";
+                message.textContent = "Login successful!";
+                setTimeout(() => {
+                    window.location.href = "../adminDashboard/home.html"; // Redirect to dashboard
+                }, 1000);
+            } else {
+                alert("Please enter username and password!"); // Show alert for missing fields
+                message.style.color = "red";
+                message.textContent = "Please enter username and password!";
+            }
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
 </html>

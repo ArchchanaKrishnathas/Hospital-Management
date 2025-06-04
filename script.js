@@ -1,13 +1,3 @@
-// document.getElementById('registrationForm').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     alert('Registration submitted successfully!');
-// });
-
-// document.getElementById('appointmentForm').addEventListener('submit', function (event) {
-//     event.preventDefault();
-//     alert('Appointment booked successfully!');
-// });
-
 
 document.addEventListener('DOMContentLoaded', () => {
     const slider = document.querySelector('.gallery-slider');
@@ -40,3 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slider.scrollLeft = scrollLeft - walk;
     });
 });
+
+
+

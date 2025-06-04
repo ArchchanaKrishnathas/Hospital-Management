@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>Login Page</title>
@@ -9,10 +9,10 @@
   <body>
     <div class="login-container">  
       <div class="login-content">
-        <div class="login-image"><img src="patientLogin.jpg" alt="Patient Login"></div>
+        <div class="login-image"><img src="../images/patientLogin.jpg" alt="Patient Login"></div>
         <div class="login-form"> 
             <h2>Patient Login</h2>
-            <form action="../Register/patientRegister.php" class="form">
+            <form onsubmit="return login()"> <!-- Prevent default form submission -->
             <div class="form-group">
               <label for="username">Username</label>
               <input type="text" id="username" class="form-input" placeholder="Username" required>
@@ -31,10 +31,33 @@
               <a href="#">Forgot Password</a>
             </div>
           </form>
+          <p id="message" class="message"></p> <!-- Message area added -->
           <p class="signup-link">Not a member? <a href="../Register/patientRegister.html">Sign Up</a></p>
-
         </div>
       </div>
     </div>
+
+    <script>
+      function login() {
+          const username = document.getElementById("username").value;
+          const password = document.getElementById("password").value;
+          const message = document.getElementById("message");
+
+          if (username && password) { 
+              alert("Login Successful! Redirecting to dashboard..."); // Show alert message
+              message.style.color = "green";
+              message.textContent = "Login successful!";
+              setTimeout(() => {
+                  window.location.href = "../patientDashboard/home.html"; // Redirect to dashboard
+              }, 1000);
+          } else {
+              alert("Please enter username and password!"); // Show alert for missing fields
+              message.style.color = "red";
+              message.textContent = "Please enter username and password!";
+          }
+
+          return false; // Prevent form submission
+      }
+    </script>
   </body>
 </html>

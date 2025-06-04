@@ -6,8 +6,8 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.js">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body >
 
@@ -58,8 +58,6 @@
             <a href="PatientLogin/patientLogin.html" class="btn booking">Book Appointment</a>
         </div>
     </div>
-    
-    
 </section>
 
 <section id="about" class="about"> 
@@ -67,7 +65,7 @@
         <div class="inner-main-about">
             <!-- Left side: Image -->
             <div class="about-inner-content-left">
-                <img src="about.png" alt="About Us Image">
+                <img src="./images/about.png" alt="About Us Image">
             </div>
     
             <!-- Right side: Text Content -->
@@ -81,7 +79,6 @@
             </div>
         </div>
     </div>
-    
 </section>
 
 <section  id="doctor" class="doctor" style="background-image: url(./images/bgPanel.jpg); background-size: cover;background-size: cover;   height: 100vh;"> 
@@ -170,8 +167,9 @@
 </section>
     <!-- our services ended -->
    
+
   <!-- Gallery Section -->
-<section id="gallery" class="gallery">
+  <section id="gallery" class="gallery">
     <h2>Our Gallery</h2>
     <div class="gallery-slider">
         <div class="gallery-item">
@@ -256,7 +254,166 @@
     </div>
 </section>
 <!-- End of News Section -->
+
+<!-- Review Section -->
+<section id="review" class="review">  
+    <div class="review-heading">
+        <h1>What Our Patients Say</h1>
+    </div>
+
+    <div class="main-inner-review">
+        <div class="review-inner-content">
+
+            <!-- Review Box 1 -->
+            <div class="review-box">
+                <img src="images/profile1.png" alt="Lara John">
+                <h2>Lara John</h2>
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="review-text">
+                    <p>Excellent hospital service, friendly staff, and top-quality care. Highly recommended!</p>
+                </div>
+            </div>
+
+            <!-- Review Box 2 -->
+            <div class="review-box">
+                <img src="images/profile2.png" alt="Sarah Smith">
+                <h2>Sarah Smith</h2>
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>   
+                <div class="review-text">
+                    <p>The doctors are very professional, and the environment is clean and comfortable.</p>
+                </div>
+            </div>
+
+            <!-- Review Box 3 -->
+            <div class="review-box">
+                <img src="images/profile3.png" alt="Michael Johnson">
+                <h2>Michael Johnson</h2>
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="review-text">
+                    <p>The pharmacy service is quick, and the nurses are very caring. A great experience overall.</p>
+                </div>
+            </div>
+            <!-- Review Box 4 -->
+            <div class="review-box">
+                <img src="images/profile4.jpg" alt="David Williams">
+                <h2>David Williams</h2>
+                <div class="review-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>   
+                <div class="review-text">
+                    <p>The hospital staff was attentive, and the treatment was excellent. I had a smooth recovery.</p>
+                </div>
+            </div>
+        </div>     
+</section>
+
+<!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <h2>Contact Us</h2>
+        <p>If you have any questions, feel free to reach out to us.</p>
+        
+        <form action="contact.php" method="POST">
+            <div class="input-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+        
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Write your message..." required></textarea>
+            </div>
+        
+            <button type="submit" class="btn-submit">Send Message</button>
+        </form>       
+    </div>
+</section>
+
+<footer>
+    <div class="footer-container">
+        <div class="footer-about">
+            <img src="./images/hospital logo.png" alt="ARC Hospital Logo" class="footer-logo">
+            <p>
+                ARC Hospital is a leading healthcare provider with international accreditation for Patient Safety and Care.
+                Our unwavering commitment to compassionate patient care, innovation & outstanding patient outcomes has earned us 
+                the high position of trust we enjoy.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>ARC HEALTH NETWORK</h3>
+            <ul>
+                <li><a href="#">ARC Medical</a></li>
+                <li><a href="#">ARC Surgical</a></li>
+                <li><a href="#">ARC Central</a></li>
+                <li><a href="#">ARC Jaffna</a></li>
+                <li><a href="#">ARC Colombo</a></li>
+                <li><a href="#">ARC Kandy</a></li>
+                <li><a href="#">ARC Laboratories</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contacts">
+            <h3>NETWORK CONTACTS</h3>
+            <ul>
+                <li>ARC Medical: +94 11 452 3300</li>
+                <li>ARC Laboratory: +94 11 452 3355</li>
+                <li>ARC Surgical: +94 11 452 4400</li>
+                <li>ARC Central: +94 11 466 5500</li>
+                <li>ARC Nova IVF: +94 11 452 3377</li>
+                <li>ARC Pharmacy: +94 11 452 4466</li>
+            </ul>
+        </div>
+        
+        <div class="footer-contact">
+            <h3>Quick Contacts</h3>
+            <p>If you have any questions or need help, feel free to contact us for medical assistance.</p>
+            <p class="emergency">24/7 Emergency</p>
+            <p class="hotline">Hotline: <span>1212</span></p>
+
+            <a href="#" class="contact-us">Contact us</a>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© ARC HEALTH 2025 All Rights Reserved. Solution by <a href="#">ArchGeeks</a></p>
+    </div>
+</footer>   
+</section>
+      
 </body>
 </html>
-</body>
-</html>
+

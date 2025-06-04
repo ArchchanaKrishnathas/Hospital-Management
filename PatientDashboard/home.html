@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARC Hospital - Online Services</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+    
+            let fullName = document.getElementById("full-name").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let date = document.getElementById("date").value;
+            let timeSlot = document.getElementById("time-slot").value;
+            let doctor = document.getElementById("doctor").value;
+            
+            if (fullName === "" || email === "" || phone === "" || date === "" || timeSlot === "" || doctor === "") {
+                alert("Please fill out all required fields before submitting.");
+                return false;
+            } else {
+                alert("Appointment booked successfully!");
+                return true;
+            }
+        }
+    
+        document.addEventListener("DOMContentLoaded", function () {
+            document.querySelector("form").addEventListener("submit", validateForm);
+        });
+    </script>
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="../images/hospital logo.png" alt="ARC Hospital Logo">
+            <div class="title">
+                <h1>ARC Hospital</h1>
+            </div>
+        </div>
+        <nav class="navbar">              
+            <div class="Logout">
+                <a href="../index.html" class="nav-btn">Logout</a>                   
+            </div>
+            <div class="profile-section">
+                <div class="profile-pic">
+                    <img src="../images/profile5.png" alt="Profile Picture">
+                    <a href="#" class="edit-icon"><i class="fas fa-edit"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Online Services Section -->
+    <section class="online-services">
+        <div class="services-heading">
+            <h1>Caring for the health of you and your family</h1>
+            <p>Use the convenience of our online services here.</p>
+        </div>
+
+        <div class="services-grid">
+            <!-- Consultation Bookings -->
+            <div class="service-card">
+                <i class="fas fa-calendar-check"></i>
+                <h3>Consultation Bookings</h3>
+                <p>Make your consultant channeling appointment here.</p>
+                <a href="#appointmentForm" class="btn">Book Now</a>
+            </div>
+
+            <!-- Download Lab Reports -->
+            <div class="service-card">
+                <i class="fas fa-file-download"></i>
+                <h3>Download Lab Reports</h3>
+                <p>Access your laboratory test results here with ease.</p>
+                <a href="#" class="btn">Access Now</a>
+            </div>
+
+            <!-- Ongoing Number -->
+            <div class="service-card">
+                <i class="fas fa-clock"></i>
+                <h3>Ongoing Number</h3>
+                <p>Monitor the ongoing number for your consultant to schedule your arrival at the hospital.</p>
+                <a href="#" class="btn">Check Now</a>
+            </div>
+
+            <!-- Wellness Packages -->
+            <div class="service-card">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Wellness Packages</h3>
+                <p>Explore our menu of health check packages to maintain your good health & wellbeing.</p>
+                <a href="#" class="btn">Explore Now</a>
+            </div>
+            
+            <!-- Online Pharmacy -->
+            <div class="service-card">
+                <i class="fas fa-prescription-bottle"></i>
+                <h3>Online Pharmacy</h3>
+                <p>Order your prescription medication and have them delivered to your doorstep.</p>
+                <a href="#" class="btn">Order Now</a>
+            </div>
+
+            
+            <!-- Appointment History -->
+            <div class="service-card">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Appointment History</h3>
+                <p>View your past appointments and details anytime.</p>
+                <a href="#" class="btn">View Now</a>
+            </div>
+
+            
+            <!-- Payment Portal -->
+            <div class="service-card">
+                <i class="fas fa-credit-card"></i>
+                <h3>Payment Portal</h3>
+                <p>Make secure online payments for your medical bills.</p>
+                <a href="#" class="btn">Pay Now</a>
+            </div>
+
+            <!-- Patient Feedback -->
+            <div class="service-card">
+                <i class="fas fa-comment-dots"></i>
+                <h3>Patient Feedback</h3>
+                <p>Please share your experience with us to enhance better always.</p>
+                <a href="#" class="btn">Share Feedback</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Appointment Form Section -->
+<section class="appointment-form" id="appointmentForm">
+    <div class="form-container">
+        <h2>Patient Appointment Form</h2>
+        <form action="#" method="post">
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div class="form-row">
+                <!-- Appointment Date -->
+                <div class="form-group">
+                    <label for="date">Appointment Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            
+                <!-- Time Slot Selection -->
+                <div class="form-group">
+                    <label for="time-slot">Select Time Slot</label>
+                    <select id="time-slot" name="time-slot" required>
+                        <option value="">Select a time slot</option>
+                        <option value="09:00-10:00">09:00 AM - 10:00 AM</option>
+                        <option value="10:00-11:00">10:00 AM - 11:00 AM</option>
+                        <option value="11:00-12:00">11:00 AM - 12:00 PM</option>
+                        <option value="13:00-14:00">01:00 PM - 02:00 PM</option>
+                        <option value="14:00-15:00">02:00 PM - 03:00 PM</option>
+                        <option value="15:00-16:00">03:00 PM - 04:00 PM</option>
+                    </select>
+                </div>
+            </div>
+            
+
+            <!-- Select Doctor -->
+            <div class="form-group">
+                <label for="doctor">Select Doctor(Available)</label>
+                <select id="doctor" name="doctor" required>
+                    <option value="">Select a doctor</option>
+                    <option value="Dr. John Doe">Dr. John Doe</option>
+                    <option value="Dr. Jane Smith">Dr. Jane Smith</option>
+                    <option value="Dr. Emily White">Dr. Emily White</option>
+                    <option value="Dr. Jeni Michael">Dr. Jeni Michael</option>
+                </select>
+            </div>
+
+            <!-- Medical History Submission -->
+            <div class="form-group">
+                <label for="medical-history">Medical History</label>
+                <textarea id="medical-history" name="medical-history" rows="4" placeholder="Provide relevant medical history (e.g., allergies, past surgeries, chronic conditions)"></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Submit Appointment</button>
+        </form>
+    </div>
+</section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <img src="./images/hospital logo.png" alt="ARC Hospital Logo" class="footer-logo">
+                <p>
+                    ARC Hospital is a leading healthcare provider with international accreditation for Patient Safety and Care.
+                    Our unwavering commitment to compassionate patient care, innovation & outstanding patient outcomes has earned us 
+                    the high position of trust we enjoy.
+                </p>
+            </div>
+    
+            <div class="footer-links">
+                <h3>ARC HEALTH NETWORK</h3>
+                <ul>
+                    <li><a href="#">ARC Medical</a></li>
+                    <li><a href="#">ARC Surgical</a></li>
+                    <li><a href="#">ARC Central</a></li>
+                    <li><a href="#">ARC Jaffna</a></li>
+                    <li><a href="#">ARC Colombo</a></li>
+                    <li><a href="#">ARC Kandy</a></li>
+                    <li><a href="#">ARC Laboratories</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-contacts">
+                <h3>NETWORK CONTACTS</h3>
+                <ul>
+                    <li>ARC Medical: +94 11 452 3300</li>
+                    <li>ARC Laboratory: +94 11 452 3355</li>
+                    <li>ARC Surgical: +94 11 452 4400</li>
+                    <li>ARC Central: +94 11 466 5500</li>
+                    <li>ARC Nova IVF: +94 11 452 3377</li>
+                    <li>ARC Pharmacy: +94 11 452 4466</li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Quick Contacts</h3>
+                <p>If you have any questions or need help, feel free to contact us for medical assistance.</p>
+                <p class="emergency">24/7 Emergency</p>
+                <p class="hotline">Hotline: <span>1212</span></p>
+    
+                <a href="#" class="contact-us">Contact us</a>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>© ARC HEALTH 2025 All Rights Reserved. Solution by <a href="#">ArchGeeks</a></p>
+        </div>
+    </footer>   
+</body>
+</html>
